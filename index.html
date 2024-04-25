@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>HLC - Ejercicio 3.4</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header><img src="./img/logo.png"></header>
+        <main id="menu">
+            <div class="linea">
+                <div class="campoR">
+                    <h1>MENU</h1>
+                </div>
+            </div>
+            <div class="linea">
+                <div class="campoR">
+                    <input type="button" id="botonEmpezar" value="EMPEZAR">
+                </div>
+            </div>
+            <div class="linea lineaB">
+                <div class="campoR">
+                    <input type="button" id="botonReglas" value="REGLAS">
+                </div>
+            </div>
+        </main>
+        <main id="partida" style="display: none;">
+            <div class="linea">
+                <div class="campoR">
+                    <h1>PARTIDA</h1>
+                </div>
+            </div>
+
+            <div class="linea">
+                <div class="campoI">SALDO</div>
+                <div class="campoD saldo" id="saldo"></div>
+            </div>
+
+            <div class="linea">
+                <div class="campoI">APUESTA</div>
+                <div class="campoD">
+                    <input type="number" id="apuesta">
+                </div>
+            </div>
+
+            <div class="linea">
+                <div class="campoI">ELIGE UN NÚMERO </div>
+                <div class="campoD">
+                    <select name="numero" id="numero">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="linea">
+                <div class="campoR" id="dado">
+                    <img src="./img/dice-01.png">
+                </div>
+            </div>
+            
+            <div class="linea">
+                <div class="campoR">
+                    <input type="button" id="botonTirar" value="TIRAR">
+                </div>
+            </div>
+
+            <div class="linea">
+                <div class="campoR">
+                    <div class="resultado" id="resultado"></div>
+                </div>
+            </div>
+            
+            <div class="linea lineaB">
+                <div class="campoR">
+                    <input type="button" id="botonVolver" value="VOLVER">
+                </div>
+            </div>
+        </main>
+        <main id="reglas" style="display: none;">
+            <div class="linea">
+                <div class="campoR">
+                    <h1>REGLAS</h1>
+                </div>
+            </div>
+            <div class="linea">
+                SALDO: Saldo del que dispones.<br>
+                APUESTA: Debe ser superior a 0 y no puede sobrepasar tu saldo.<br>
+                ELIGE UN NÚMERO: Elige el número que creas que va a salir.<br>
+                TIRAR: Pulsa en tirar una vez introducida la apuesta y seleccionar el número.<br>
+                <br>
+                El dado girará hasta mostrar el resultado.<br>
+                Si aciertas, ganarás el doble de lo apostado a tu saldo.<br>
+                Si fallas, se restará la apuesta de tu saldo.<br>
+                Si llegas a 200€, ¡Enhorabuena! Habrás ganado.<br>
+                Si te quedas con 0€ de saldo, se acabó la partida.<br><br>
+            </div>
+            <div class="linea lineaB">
+                <div class="campoR">
+                    <input type="button" id="botonVolver2" value="VOLVER">
+                </div>
+            </div>
+        </main>
+        <footer>
+            ©2024 HLC Ejercicio 3.4 - Creado por Daniel Amores
+        </footer>
+    </div>
+</body>
+</html>
+<script src="./js/menu.js"></script>
+<script src="./js/partida.js"></script>
